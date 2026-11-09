@@ -5,7 +5,7 @@ look: brute-force attempts, a brute-force that ended in a successful login, and
 Kerberoasting indicators in Windows 4769 events.
 
 I wrote this while building my Active Directory lab in
-[purple-team-journey](https://github.com/Siddique-12300983/purple-team-journey).
+[purple-team-journey](https://github.com/ruxchipher/purple-team-journey).
 Reading raw `auth.log` and Security event exports by eye gets old fast, so this
 does the first pass and prints a short summary.
 
@@ -33,7 +33,7 @@ having. But in my own lab, Windows Server 2025 refuses to issue RC4 tickets, so
 a real roast there shows up as AES (`0x12`), and an RC4-only rule would miss it.
 That is why the SPN fan-out detector exists: it catches the attack by behaviour,
 not encryption type. The full write-up is in the flagship repo under
-[labs/ad-lab/kerberoasting.md](https://github.com/Siddique-12300983/purple-team-journey/blob/main/labs/ad-lab/kerberoasting.md).
+[labs/ad-lab/kerberoasting.md](https://github.com/ruxchipher/purple-team-journey/blob/main/labs/ad-lab/kerberoasting.md).
 
 ## Supported formats
 
@@ -50,7 +50,7 @@ No third-party packages are needed to run it; it uses the Python standard
 library. Python 3.9 or newer.
 
 ```bash
-git clone https://github.com/Siddique-12300983/log-analyzer.git
+git clone https://github.com/ruxchipher/log-analyzer.git
 cd log-analyzer
 ```
 
@@ -139,10 +139,10 @@ tests/          pytest suite
 
 ## Related repos
 
-- [attack-coverage-map](https://github.com/Siddique-12300983/attack-coverage-map) reads this repo and reports which ATT&CK techniques my detections actually cover, and where the gaps are. [Live heatmap](https://siddique-12300983.github.io/attack-coverage-map/)
-- [persistwatch](https://github.com/Siddique-12300983/persistwatch) hunts Linux persistence in systemd units and timers
-- [sigma-detection-rules](https://github.com/Siddique-12300983/sigma-detection-rules) the Sigma rules, mapped to ATT&CK
-- [purple-team-journey](https://github.com/Siddique-12300983/purple-team-journey) the AD lab all of this came out of
+- [attack-coverage-map](https://github.com/ruxchipher/attack-coverage-map) reads this repo and reports which ATT&CK techniques my detections actually cover, and where the gaps are. [Live heatmap](https://ruxchipher.github.io/attack-coverage-map/)
+- [persistwatch](https://github.com/ruxchipher/persistwatch) hunts Linux persistence in systemd units and timers
+- [sigma-detection-rules](https://github.com/ruxchipher/sigma-detection-rules) the Sigma rules, mapped to ATT&CK
+- [purple-team-journey](https://github.com/ruxchipher/purple-team-journey) the AD lab all of this came out of
 
 ## License
 
@@ -153,5 +153,5 @@ MIT. See [LICENSE](LICENSE).
 Built by **ruxchipher** (Md Abu Bakar Siddique), cyber security student working
 toward a purple team role.
 [ruxchipher.com](https://ruxchipher.com) ·
-[GitHub](https://github.com/Siddique-12300983) ·
+[GitHub](https://github.com/ruxchipher) ·
 [LinkedIn](https://linkedin.com/in/siddiqueabu)
